@@ -71,6 +71,6 @@ function gettingJSON(){
         tempImg = json["weather"][0]["icon"];
         let x = document.getElementById("tempImg");
         x.setAttribute("alt", json["weather"][0]["description"]);
-        x.setAttribute("src", "http://openweathermap.org/img/wn/" + tempImg + "@2x.png");
+        x.setAttribute("src", "https://openweathermap.org/img/wn/" + tempImg + "@2x.png");
     });
 }
