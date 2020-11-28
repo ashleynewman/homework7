@@ -35,10 +35,10 @@ function gettingJSON(){
     var r = /\d/;
     if (location.match(r) != null) { //is a zip
       let x = location.split(",");
-      query = "http://api.openweathermap.org/data/2.5/weather?zip=" + x[0].trim() + "," + x[1].trim() + "&units=" + format + "&appid=" + api_key;
+      query = "https://api.openweathermap.org/data/2.5/weather?zip=" + x[0].trim() + "," + x[1].trim() + "&units=" + format + "&appid=" + api_key;
     } else { //not zip
       let x = location.split(",");
-      query = "http://api.openweathermap.org/data/2.5/weather?q=" + x[0].trim() + "&units=" + format + "&appid=" + api_key;
+      query = "https://api.openweathermap.org/data/2.5/weather?q=" + x[0].trim() + "&units=" + format + "&appid=" + api_key;
     }
     console.log("Query is :" + query);
 
