@@ -34,11 +34,11 @@ function gettingJSON(){
     // Your code here. this will be a list of the json stuff from the weather api
     var r = /\d/;
     if (location.match(r) != null) { //is a zip
-      let x = location.split(",");
-      query = "https://api.openweathermap.org/data/2.5/weather?zip=" + x[0].trim() + "," + x[1].trim() + "&units=" + format + "&appid=" + api_key;
+      //let x = location.split(","); x[0].trim() + "," + x[1].trim() x[0].trim()
+      query = "https://api.openweathermap.org/data/2.5/weather?zip=" + location + "&units=" + format + "&appid=" + api_key;
     } else { //not zip
       let x = location.split(",");
-      query = "https://api.openweathermap.org/data/2.5/weather?q=" + x[0].trim() + "&units=" + format + "&appid=" + api_key;
+      query = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=" + format + "&appid=" + api_key;
     }
     console.log("Query is :" + query);
 
